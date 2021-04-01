@@ -1,0 +1,21 @@
+to get a cohesive image with conceptual sense for EF. If I am really savvu.
+
+1. create controller as this is endpoint for api, it should not include services, it should be as simple as possible. 
+
+2, create one services folder to put all services that controller needs.
+
+3. create one Data folder to host dbContext
+
+
+dotnet add package Microsoft.EntityFrameworkCore.SQLite -v 5.0.0-*
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer -v 5.0.0-*
+dotnet add package Microsoft.EntityFrameworkCore.Design -v 5.0.0-*
+dotnet add package Microsoft.EntityFrameworkCore.Tools -v 5.0.0-*
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design -v 5.0.0-*
+dotnet add package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore -v 5.0.0-*  
+
+// to migrations
+dotnet tool install --global dotnet-ef
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet ef migrations add InitialCreate
+dotnet ef database update
